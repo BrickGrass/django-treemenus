@@ -18,16 +18,6 @@ from treemenus.config import APP_LABEL
 register = template.Library()
 
 
-@register.simple_tag
-def get_treemenus_static_prefix():
-    if django.VERSION >= (1, 3):
-        from django.templatetags.static import PrefixNode
-        return PrefixNode.handle_simple("STATIC_URL") + 'treemenus/img'
-    else:
-        from django.contrib.admin.templatetags.adminmedia import admin_media_prefix
-        return admin_media_prefix() + 'img/admin/'
-
-
 def show_menu(context, menu_name, menu_type=None):
     try:
         menu = Menu.objects.get(name=menu_name)
