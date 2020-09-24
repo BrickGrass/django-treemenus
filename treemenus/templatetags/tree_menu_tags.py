@@ -9,7 +9,7 @@ from django.template import Node, TemplateSyntaxError
 
 PY3 = sys.version_info[0] == 3
 if PY3:
-    from django.utils import six
+    import six
 
 from treemenus.models import Menu, MenuItem
 from treemenus.config import APP_LABEL
