@@ -1,6 +1,7 @@
 {% extends "admin/change_form.html" %}
 {% load i18n %}
 {% load tree_menu_tags %}
+{% load static %}
 
 
 {% block after_related_objects %}
@@ -9,7 +10,7 @@
       <h2>{% trans "Menu Items" %}</h2>
 
       <div class="form-row" >
-        <img src="{% get_treemenus_static_prefix %}/icon_addlink.gif" width="10" height="10"/>
+        <img src="{% static img/icon_addlink.gif %}" width="10" height="10"/>
         <a href="../items/add/">{% trans "Add an item" %}</a>
       </div>
 
@@ -54,7 +55,7 @@
                 {% ifnotequal menu_item.rank menu_item.siblings.count %}
                   <td width="20" align="center">
                     <a href="../items/{{ menu_item.pk }}/move_down/">
-                      <img src="{% get_treemenus_static_prefix %}/arrow-down.gif" border="0" alt="{% trans 'Down' %}"/>
+                      <img src="{% static img/arrow-down.gif %}" border="0" alt="{% trans 'Down' %}"/>
                     </a>
                   </td>
                 {% else %}
@@ -64,7 +65,7 @@
                 {% ifnotequal menu_item.rank 0 %}
                   <td width="20" align="center">
                     <a href="../items/{{ menu_item.pk }}/move_up/">
-                      <img src="{% get_treemenus_static_prefix %}/arrow-up.gif" border="0" alt="{% trans 'Up' %}"/>
+                      <img src="{% static img/arrow-up.gif %}" border="0" alt="{% trans 'Up' %}"/>
                     </a>
                   </td>
                 {% else %}
