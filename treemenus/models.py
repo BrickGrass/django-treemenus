@@ -9,7 +9,7 @@ LOGIN_REQUIRED = 2
 LOGIN_STATUS_CHOICES = [
     (PUBLIC, "Public"),
     (LOGOUT_REQUIRED, "Logout Required"),
-    (LOGIN_REQUIRED, "Logout Required")
+    (LOGIN_REQUIRED, "Login Required")
 ]
 
 
